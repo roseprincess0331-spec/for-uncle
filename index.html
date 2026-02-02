@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card🎁</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="courgette-regular">🎂For Uncle🎂</h1>
+
+        <!-- 💌 Letter -->
+        <div class="letter">
+            <div class="letter-lines">
+                삼촌 생일 축하해🎉🎉<br><br>
+
+                준이랑 민이가 아직 못 챙겨주니까
+                이번엔 내가 대신 챙겨주도록 하지ㅎㅎ<br><br>
+
+                삼촌이랑 가까이 살게 되니까
+                더 자주 보게 되고 집이 훨씬 와글와글해진 것 같아서 좋아.
+                나 사고 쳤을 때도 같이 걱정해주고
+                이것저것 신경써줘서 진짜 고마워~!!<br>
+
+                항상 건강 잘 챙기고
+                앞으로도 돈 많이 벌고 행복한 일 가득하길~~<br><br>
+
+                나도 앞으로 잘 지내고,
+                삼촌한테 폐 안 끼치게 열심히 살게😊<br><br>
+
+                아래는 받고 싶은 선물 골라줘!!
+            </div>
+        </div>
+
+
+        <form id="giftForm">
+
+            <div class="gift-section">
+                <strong>👕 티셔츠</strong>
+
+                <div class="option-grid">
+                    <label class="option-card">
+                        <input type="radio" name="gift" value="t-shirt-black" required>
+                        <div class="img-frame">
+                            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20220225/2386346/2386346_1_big.jpg?w=1200"
+                                alt="티셔츠 옵션 1">
+                        </div>
+                        <span>[리트리버클럽] 반팔티셔츠 Black L</span>
+                    </label>
+
+                    <label class="option-card">
+                        <input type="radio" name="gift" value="t-shirt-green">
+                        <div class="img-frame">
+                            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20220329/2451948/2451948_1_big.jpg?w=1200"
+                                alt="티셔츠 옵션 2">
+                        </div>
+                        <span>[리트리버클럽] 반팔티셔츠 Green L</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="gift-section">
+                <strong>💧 수분크림</strong>
+
+                <div class="option-grid">
+                    <label class="option-card">
+                        <input type="radio" name="gift" value="moisture-cream-dj">
+                        <div class="img-frame">
+                            <img src="images\doctor-j.jpg"
+                                alt="수분크림 옵션 1">
+                        </div>
+                        <span>[닥터자르트] 세라마이딘 모이스처라이징 크림 50ml</span>
+                    </label>
+
+                    <label class="option-card">
+                        <input type="radio" name="gift" value="moisture-cream-rej">
+                        <div class="img-frame">
+                            <img src="images\rejuran.jpg"
+                                alt="수분크림 옵션 2">
+                        </div>
+                        <span>[리쥬란] 더마힐러 모이스처 크림</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                선물 선택 완료 💌
+            </button>
+
+            <p class="tiny">
+                선물 뭐 줄지 고민되길래, 특별하게 한번 준비해봤어ㅎㅎ
+            </p>
+        </form>
+        <footer class="event-footer">
+            <p>made by Inwoo</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("adc-WrH9zi0JmWnYw");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

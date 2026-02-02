@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "Handwriting";
+    src: url("./fonts/MyHandwriting.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.courgette-regular {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background: #5e503f;
+    font-family: 'Noto Serif KR', 'Noto Sans KR', serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 2em;
+    color: #5e503f;
+}
+
+.container {
+    background: #e3d5ca;
+    padding: 1.2rem 1rem 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    margin-bottom: 26px;
+    font-weight: 600;
+    color: #5e503f;
+}
+
+.letter {
+    position: relative;
+    background-color: #fffaf6;
+    padding: 2.8rem 1.6rem;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2.4rem;
+}
+
+.letter::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(94, 80, 63, 0.06) 1px, transparent 1px),
+        radial-gradient(rgba(94, 80, 63, 0.04) 1px, transparent 1px);
+    background-size: 6px 6px, 4px 4px;
+    background-position: 0 0, 1px 1px;
+
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.letter-lines {
+    font-size: 1rem;
+    line-height: 2.4rem;
+    color: #5e503f;
+    text-align: left;
+    font-family: "Handwriting", serif;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    background-image: linear-gradient(to bottom,
+            transparent calc(2.4rem * 0.7),
+            rgba(94, 80, 63, 0.7) calc(2.4rem * 0.7 + 0.06rem),
+            transparent calc(2.4rem * 0.7 + 0.06rem));
+
+    background-size: 100% 2.4rem;
+    background-repeat: repeat-y;
+}
+
+
+.gift-section {
+    margin-bottom: 26px;
+}
+
+.gift-section strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+    color: #5e503f;
+    text-align: left;
+}
+
+.gift-section img {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.option-card {
+    font-size: 0.8em;
+}
+
+.img-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    background: #f0ede8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-frame img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+
+label {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background: #fffaf6;
+    border: 1px solid rgba(94, 80, 63, 0.25);
+    transition: all 0.25s ease;
+}
+
+label:hover {
+    background: rgba(227, 213, 202, 0.7);
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+.option-card {
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease,
+        border-color 0.2s ease;
+}
+
+.option-card:has(input:checked) {
+    background: rgba(227, 213, 202, 0.9);
+    border-color: #5e503f;
+
+    box-shadow:
+        0 4px 10px rgba(94, 80, 63, 0.25),
+        0 10px 24px rgba(94, 80, 63, 0.35);
+
+    transform: translateY(-2px);
+}
+
+.option-card:has(input:checked) span {
+    font-weight: 600;
+    color: #3f3528;
+}
+
+
+button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    background: #5e503f;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: #4a3f31;
+    transform: translateY(-1px);
+}
+
+.tiny {
+    margin-top: 16px;
+    font-size: 0.8em;
+    color: #5e503f;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.event-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+
+    font-size: 0.7em;
+    color: rgba(94, 80, 63, 0.6);
+}
+
+@media (max-width: 480px) {
+    .option-grid {
+        gap: 0.6rem;
+    }
+
+    .letter-lines {
+        font-size: 0.85rem;
+    }
+
+    .gift-section strong {
+        font-size: 0.9rem;
+    }
+
+    .option-card span {
+        font-size: 0.7rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+    }
+
+    .tiny {
+        font-size: 0.7rem;
+    }
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #5e503f;
+  text-decoration: none;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}
